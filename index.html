@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KARAT Downloads</title>
+  <meta name="description" content="Rozcestník pro stažení KARAT podpory a KRA instalace.">
+  <link rel="icon" href="karat.ico" sizes="any">
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: #ffffff;
+      --text: #162033;
+      --muted: #5b6780;
+      --border: rgba(22, 32, 51, 0.12);
+      --shadow: 0 24px 60px rgba(39, 58, 110, 0.16);
+      --blue: #0f4fcf;
+      --blue-deep: #092f7d;
+      --cyan: #23b0d9;
+      --gold: #ffb545;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(35, 176, 217, 0.24), transparent 28%),
+        radial-gradient(circle at right center, rgba(255, 181, 69, 0.22), transparent 22%),
+        linear-gradient(160deg, #eef4ff 0%, #f9fbff 45%, #eef2f9 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .shell {
+      width: min(1040px, 100%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: 40px 40px 24px;
+      background:
+        linear-gradient(135deg, rgba(15, 79, 207, 0.96), rgba(9, 47, 125, 0.94)),
+        linear-gradient(135deg, rgba(35, 176, 217, 0.18), rgba(255, 181, 69, 0.1));
+      color: #fff;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -5% -40% auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 65%);
+      z-index: -1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand img {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 10px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin: 14px 0 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 28px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 24px;
+      background: var(--surface-strong);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(14, 35, 79, 0.13);
+      border-color: rgba(15, 79, 207, 0.3);
+      outline: none;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--blue-deep);
+      background: rgba(15, 79, 207, 0.08);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.38rem;
+      line-height: 1.15;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .target {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .target::after {
+      content: "->";
+      font-size: 1rem;
+    }
+
+    .footer {
+      padding: 0 28px 28px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 28px 24px 20px;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .grid,
+      .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="brand">
+        <img src="karat.svg" alt="KARAT logo">
+        <div>
+          <h1>KARAT download rozcestník</h1>
+          <p class="lead">Rychlé odkazy pro TV podporu a KRA instalaci. Odkazy vedou přímo na cílové soubory na příslušných adresách.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Seznam odkazů">
+      <a class="card" href="https://tv.karatsoftware.cz/KaratAssitenceSupport.exe">
+        <span class="pill">TV download</span>
+        <h2>tv.karatsoftware.cz</h2>
+        <p>Přímý odkaz na podporu přes <strong>KaratAssitenceSupport.exe</strong>.</p>
+        <span class="target">Otevřít soubor</span>
+      </a>
+
+      <a class="card" href="https://tv.karat.cz/KaratAssitenceSupport.exe">
+        <span class="pill">TV download</span>
+        <h2>tv.karat.cz</h2>
+        <p>Alternativní TV adresa směřující na <strong>KaratAssitenceSupport.exe</strong>.</p>
+        <span class="target">Otevřít soubor</span>
+      </a>
+
+      <a class="card" href="https://kra.karatsoftware.cz/KRA.msi">
+        <span class="pill">KRA instalace</span>
+        <h2>kra.karatsoftware.cz</h2>
+        <p>Instalační balíček <strong>KRA.msi</strong> pro okamžité stažení.</p>
+        <span class="target">Otevřít soubor</span>
+      </a>
+    </section>
+
+    <div class="footer">
+      Soubory jsou k dispozici i přímo v tomto adresáři: <strong>KaratAssitenceSupport.exe</strong> a <strong>KRA.msi</strong>.
+    </div>
+  </main>
+</body>
+</html>

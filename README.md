@@ -1,1 +1,2 @@
-# karat-files
+Pomocné webové stránky pro distribuci základních programů.
+

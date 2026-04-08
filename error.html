@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přesměrování | KARAT</title>
+  <meta http-equiv="refresh" content="0; url=/KaratAssitenceSupport.exe">
+  <link rel="icon" href="karat.ico" sizes="any">
+  <style>
+    :root {
+      --bg1: #0f4fcf;
+      --bg2: #092f7d;
+      --text: #f4f7ff;
+      --muted: rgba(244, 247, 255, 0.78);
+      --panel: rgba(255, 255, 255, 0.12);
+      --border: rgba(255, 255, 255, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(35, 176, 217, 0.22), transparent 28%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+
+    .panel {
+      width: min(560px, 100%);
+      padding: 32px;
+      border-radius: 28px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      text-align: center;
+      box-shadow: 0 24px 50px rgba(5, 18, 55, 0.3);
+    }
+
+    img {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+      padding: 10px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    a {
+      color: #ffffff;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <img src="karat.svg" alt="KARAT logo">
+    <h1>Přesměrování na podporu</h1>
+    <p>Pokud se stránka nepřesměruje automaticky, pokračujte přes <a href="/KaratAssitenceSupport.exe">KaratAssitenceSupport.exe</a>.</p>
+  </main>
+  <script>
+    window.location.replace("/KaratAssitenceSupport.exe");
+  </script>
+</body>
+</html>
