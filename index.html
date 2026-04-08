@@ -234,5 +234,25 @@
       Soubory jsou k dispozici i přímo v tomto adresáři: <strong>KaratAssitenceSupport.exe</strong> a <strong>KRA.msi</strong>.
     </div>
   </main>
+  <script>
+    (function () {
+      var host = window.location.hostname.toLowerCase();
+      var path = window.location.pathname;
+      var isRoot = path === "/" || path === "/index.html";
+
+      if (!isRoot) {
+        return;
+      }
+
+      if (host === "tv.karatsoftware.cz" || host === "tv.karat.cz") {
+        window.location.replace("/KaratAssitenceSupport.exe");
+        return;
+      }
+
+      if (host === "kra.karatsoftware.cz") {
+        window.location.replace("/KRA.msi");
+      }
+    })();
+  </script>
 </body>
 </html>

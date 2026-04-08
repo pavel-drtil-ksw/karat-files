@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Přesměrování | KARAT</title>
-  <meta http-equiv="refresh" content="0; url=/KaratAssitenceSupport.exe">
   <link rel="icon" href="karat.ico" sizes="any">
   <style>
     :root {
@@ -75,10 +74,25 @@
   <main class="panel">
     <img src="karat.svg" alt="KARAT logo">
     <h1>Přesměrování na podporu</h1>
-    <p>Pokud se stránka nepřesměruje automaticky, pokračujte přes <a href="/KaratAssitenceSupport.exe">KaratAssitenceSupport.exe</a>.</p>
+    <p>Pokud se stránka nepřesměruje automaticky, pokračujte přes <a id="fallback-link" href="/KaratAssitenceSupport.exe">KaratAssitenceSupport.exe</a>.</p>
   </main>
   <script>
-    window.location.replace("/KaratAssitenceSupport.exe");
+    (function () {
+      var host = window.location.hostname.toLowerCase();
+      var target = "/KaratAssitenceSupport.exe";
+
+      if (host === "kra.karatsoftware.cz") {
+        target = "/KRA.msi";
+      }
+
+      var link = document.getElementById("fallback-link");
+      if (link) {
+        link.href = target;
+        link.textContent = target.substring(1);
+      }
+
+      window.location.replace(target);
+    })();
   </script>
 </body>
 </html>
