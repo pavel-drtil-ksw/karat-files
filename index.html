@@ -228,6 +228,13 @@
         <p>Instalační balíček <strong>KRA.msi</strong> pro okamžité stažení.</p>
         <span class="target">Otevřít soubor</span>
       </a>
+
+      <a class="card" href="https://kra.karat.cz/KRA.msi">
+        <span class="pill">KRA instalace</span>
+        <h2>kra.karat.cz</h2>
+        <p>Alternativní KRA adresa směřující na <strong>KRA.msi</strong>.</p>
+        <span class="target">Otevřít soubor</span>
+      </a>
     </section>
 
     <div class="footer">
@@ -249,7 +256,7 @@
         return;
       }
 
-      if (host === "kra.karatsoftware.cz") {
+      if (host === "kra.karatsoftware.cz" || host === "kra.karat.cz") {
         window.location.replace("/KRA.msi");
       }
     })();
