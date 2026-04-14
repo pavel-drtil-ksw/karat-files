@@ -1,0 +1,19 @@
+{
+  "schema": "dist-release/v1",
+  "component": "App",
+  "channel": "beta",
+  "version": "26.3.1",
+  "compat": [
+    1
+  ],
+  "requires": {},
+  "artifacts": [
+    {
+      "file": "app.zip",
+      "uri": "beta/App/26.3.1/app.zip",
+      "size": 3949167,
+      "sha256": "913a29d09b02ab28569515dd164645bba0fc8fb84eecc026b3520f88b9e60f18"
+    }
+  ],
+  "publishedAt": "2026-03-03T13:21:07.8234545Z"
+}

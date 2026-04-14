@@ -1,0 +1,19 @@
+{
+  "schema": "dist-release/v1",
+  "component": "App",
+  "channel": "release",
+  "version": "26.4.4",
+  "compat": [
+    1
+  ],
+  "requires": {},
+  "artifacts": [
+    {
+      "file": "app.zip",
+      "uri": "release/App/26.4.4/app.zip",
+      "size": 3774353,
+      "sha256": "de54dc737b11b6ef52e6062af9d79e0c358c97d65d94e46248fb25c6f3935803"
+    }
+  ],
+  "publishedAt": "2026-04-02T08:09:26.3855500Z"
+}

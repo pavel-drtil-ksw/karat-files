@@ -1,0 +1,11 @@
+{
+  "schema": "dist-current/v1",
+  "component": "Loader",
+  "channel": "release",
+  "currentVersion": "26.3.0",
+  "compat": [
+    1
+  ],
+  "releaseUri": "release/Loader/26.3.0/release.json",
+  "publishedAt": "2026-03-17T08:33:12.6600847Z"
+}

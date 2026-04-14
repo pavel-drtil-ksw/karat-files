@@ -1,0 +1,32 @@
+{
+  "schema": "dist-release/v1",
+  "component": "Service",
+  "channel": "release",
+  "version": "26.3.0",
+  "compat": [
+    1
+  ],
+  "requires": {
+    "Loader": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    },
+    "App": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "service.msi",
+      "uri": "release/Service/26.3.0/service.msi",
+      "size": 32694272,
+      "sha256": "8bbf68889010b74cb2fad03f7d256c9aab5a4e09a0933884a2bf84e9b4d97708"
+    }
+  ],
+  "publishedAt": "2026-03-17T08:36:53.1425591Z"
+}

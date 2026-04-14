@@ -1,0 +1,11 @@
+{
+  "schema": "dist-current/v1",
+  "component": "App",
+  "channel": "beta",
+  "currentVersion": "26.4.0",
+  "compat": [
+    1
+  ],
+  "releaseUri": "beta/App/26.4.0/release.json",
+  "publishedAt": "2026-04-01T06:42:33.5088373Z"
+}
