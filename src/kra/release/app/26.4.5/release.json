@@ -1,0 +1,19 @@
+{
+  "schema": "dist-release/v1",
+  "component": "App",
+  "channel": "release",
+  "version": "26.4.5",
+  "compat": [
+    1
+  ],
+  "requires": {},
+  "artifacts": [
+    {
+      "file": "app.zip",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/app%2F26.4.5-release/app.zip",
+      "size": 3776003,
+      "sha256": "efaf4c96430e1a1201480304747bd6fd80e229bf98c5a4f2c4fb59ebe2eff38d"
+    }
+  ],
+  "publishedAt": "2026-04-20T07:03:39.2925651Z"
+}
