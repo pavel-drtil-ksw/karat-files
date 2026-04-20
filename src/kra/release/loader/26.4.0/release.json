@@ -1,0 +1,26 @@
+{
+  "schema": "dist-release/v1",
+  "component": "Loader",
+  "channel": "release",
+  "version": "26.4.0",
+  "compat": [
+    1
+  ],
+  "requires": {
+    "App": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "loader.msi",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/loader%2F26.4.0-release/loader.msi",
+      "size": 43658047,
+      "sha256": "467238b03d6457aa87d30dd9298d84f8f404ddee69ca28d367fac37c1614f128"
+    }
+  ],
+  "publishedAt": "2026-04-20T07:08:49.5124681Z"
+}
