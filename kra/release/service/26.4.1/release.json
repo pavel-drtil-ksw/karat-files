@@ -1,0 +1,32 @@
+{
+  "schema": "dist-release/v1",
+  "component": "Service",
+  "channel": "release",
+  "version": "26.4.1",
+  "compat": [
+    1
+  ],
+  "requires": {
+    "Loader": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    },
+    "App": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "service.msi",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/service%2F26.4.1-release/service.msi",
+      "size": 31809536,
+      "sha256": "215039d3aeb6674cb9980d182ca1b399db7d9b9d98180357abf97c1ef78ca240"
+    }
+  ],
+  "publishedAt": "2026-04-20T07:27:32.2661272Z"
+}
