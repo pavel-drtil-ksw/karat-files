@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -194,6 +195,7 @@
     }
   </style>
 </head>
+
 <body>
   <main class="shell">
     <section class="hero">
@@ -201,7 +203,8 @@
         <img src="karat.svg" alt="KARAT logo">
         <div>
           <h1>KARAT download rozcestník</h1>
-          <p class="lead">Rychlé odkazy pro TV podporu a KRA instalaci. Odkazy vedou přímo na cílové soubory na příslušných adresách.</p>
+          <p class="lead">Rychlé odkazy pro TV podporu a KRA instalaci. Odkazy vedou přímo na cílové soubory na
+            příslušných adresách.</p>
         </div>
       </div>
     </section>
@@ -247,15 +250,73 @@
         return;
       }
 
+      function fail(message, error) {
+        console.error(message, error);
+        document.body.innerHTML = "<p>Stažení instalátoru se nepodařilo spustit.</p>";
+      }
+
+      async function redirectToKraRelease() {
+        try {
+          var currentResponse = await fetch("/kra/release/service/current.json", {
+            cache: "no-store"
+          });
+
+          if (!currentResponse.ok) {
+            throw new Error("Failed to load current.json: HTTP " + currentResponse.status);
+          }
+
+          var current = await currentResponse.json();
+
+          if (!current || !current.releaseUri) {
+            throw new Error("current.json does not contain releaseUri");
+          }
+
+          var releaseJsonUrl = new URL(current.releaseUri, window.location.origin + "/kra/");
+
+          var releaseResponse = await fetch(releaseJsonUrl.href, {
+            cache: "no-store"
+          });
+
+          if (!releaseResponse.ok) {
+            throw new Error("Failed to load release.json: HTTP " + releaseResponse.status);
+          }
+
+          var release = await releaseResponse.json();
+
+          if (!release || !Array.isArray(release.artifacts)) {
+            throw new Error("release.json does not contain artifacts");
+          }
+
+          var artifact = release.artifacts.find(function (a) {
+            return a && a.file === "service.msi" && a.uri;
+          });
+
+          if (!artifact) {
+            throw new Error("service.msi artifact not found");
+          }
+
+          var parsed = new URL(artifact.uri);
+
+          if (parsed.protocol !== "https:") {
+            throw new Error("Only HTTPS download URLs are allowed");
+          }
+
+          window.location.replace(parsed.href);
+        } catch (error) {
+          fail("KRA download redirect failed:", error);
+        }
+      }
+
       if (host === "tv.karatsoftware.cz" || host === "tv.karat.cz") {
         window.location.replace("/KaratAssitenceSupport.exe");
         return;
       }
 
       if (host === "kra.karatsoftware.cz" || host === "kra.karat.cz") {
-        window.location.replace("/KRA.msi");
+        redirectToKraRelease();
       }
     })();
   </script>
 </body>
+
 </html>
