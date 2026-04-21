@@ -1,0 +1,19 @@
+{
+  "schema": "dist-release/v1",
+  "component": "App",
+  "channel": "alpha-test",
+  "version": "26.2.8",
+  "compat": [
+    1
+  ],
+  "requires": {},
+  "artifacts": [
+    {
+      "file": "app.zip",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/app%2F26.2.8-alpha-test/app.zip",
+      "size": 4452486,
+      "sha256": "109ecd6c22cd403a04fb3930f97d4fd4a3098ad86823347f5fbbcceceb5c48f4"
+    }
+  ],
+  "publishedAt": "2026-04-20T15:26:15.7864322Z"
+}

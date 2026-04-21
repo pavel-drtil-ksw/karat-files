@@ -1,0 +1,11 @@
+{
+  "schema": "dist-current/v1",
+  "component": "App",
+  "channel": "alpha-test",
+  "currentVersion": "26.2.8",
+  "compat": [
+    1
+  ],
+  "releaseUri": "alpha-test/app/26.2.8/release.json",
+  "publishedAt": "2026-04-20T15:26:19.4038073Z"
+}
