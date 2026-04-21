@@ -288,11 +288,11 @@
           }
 
           var artifact = release.artifacts.find(function (a) {
-            return a && a.file === "service.msi" && a.uri;
+            return a && a.file === "kra-service.msi" && a.uri;
           });
 
           if (!artifact) {
-            throw new Error("service.msi artifact not found");
+            throw new Error("kra-service.msi artifact not found");
           }
 
           var parsed = new URL(artifact.uri);
