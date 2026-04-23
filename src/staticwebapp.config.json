@@ -1,4 +1,11 @@
 ﻿{
+  "routes": [
+    {
+      "route": "/KRA.msi",
+      "redirect": "https://github.com/denis-navratil-ksw/dist/releases/download/kra-latest/KRA.msi",
+      "statusCode": 302
+    }
+  ],
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html",

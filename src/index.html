@@ -250,70 +250,16 @@
         return;
       }
 
-      function fail(message, error) {
-        console.error(message, error);
-        document.body.innerHTML = "<p>Stažení instalátoru se nepodařilo spustit.</p>";
-      }
-
-      async function redirectToKraRelease() {
-        try {
-          var currentResponse = await fetch("/kra/release/service/current.json", {
-            cache: "no-store"
-          });
-
-          if (!currentResponse.ok) {
-            throw new Error("Failed to load current.json: HTTP " + currentResponse.status);
-          }
-
-          var current = await currentResponse.json();
-
-          if (!current || !current.releaseUri) {
-            throw new Error("current.json does not contain releaseUri");
-          }
-
-          var releaseJsonUrl = new URL(current.releaseUri, window.location.origin + "/kra/");
-
-          var releaseResponse = await fetch(releaseJsonUrl.href, {
-            cache: "no-store"
-          });
-
-          if (!releaseResponse.ok) {
-            throw new Error("Failed to load release.json: HTTP " + releaseResponse.status);
-          }
-
-          var release = await releaseResponse.json();
-
-          if (!release || !Array.isArray(release.artifacts)) {
-            throw new Error("release.json does not contain artifacts");
-          }
-
-          var artifact = release.artifacts.find(function (a) {
-            return a && a.file === "kra-service.msi" && a.uri;
-          });
-
-          if (!artifact) {
-            throw new Error("kra-service.msi artifact not found");
-          }
-
-          var parsed = new URL(artifact.uri);
-
-          if (parsed.protocol !== "https:") {
-            throw new Error("Only HTTPS download URLs are allowed");
-          }
-
-          window.location.replace(parsed.href);
-        } catch (error) {
-          fail("KRA download redirect failed:", error);
-        }
-      }
-
       if (host === "tv.karatsoftware.cz" || host === "tv.karat.cz") {
         window.location.replace("/KaratAssitenceSupport.exe");
         return;
       }
 
       if (host === "kra.karatsoftware.cz" || host === "kra.karat.cz") {
-        redirectToKraRelease();
+        // /KRA.msi is a 302 redirect (see staticwebapp.config.json) to the permanent
+        // GitHub Releases asset under the 'kra-latest' tag, which is replaced in place
+        // by the service deployment pipeline for every pure 'release' channel build.
+        window.location.replace("/KRA.msi");
       }
     })();
   </script>
