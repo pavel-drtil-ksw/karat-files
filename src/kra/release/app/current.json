@@ -2,10 +2,10 @@
   "schema": "dist-current/v1",
   "component": "App",
   "channel": "release",
-  "currentVersion": "26.4.7",
+  "currentVersion": "26.4.8",
   "compat": [
     1
   ],
-  "releaseUri": "release/app/26.4.7/release.json",
-  "publishedAt": "2026-04-21T06:59:17.4363526Z"
+  "releaseUri": "release/app/26.4.8/release.json",
+  "publishedAt": "2026-04-29T18:30:46.1027388Z"
 }
