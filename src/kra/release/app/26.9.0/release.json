@@ -1,0 +1,19 @@
+{
+  "schema": "dist-release/v1",
+  "component": "App",
+  "channel": "release",
+  "version": "26.9.0",
+  "compat": [
+    1
+  ],
+  "requires": {},
+  "artifacts": [
+    {
+      "file": "kra-app.zip",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/app%2F26.9.0-release/kra-app.zip",
+      "size": 3727569,
+      "sha256": "a8f58a134c38a4e851e01f91c24816592d40ffa201f5351ced101a9181bd6749"
+    }
+  ],
+  "publishedAt": "2026-09-02T09:06:47.6270466Z"
+}
