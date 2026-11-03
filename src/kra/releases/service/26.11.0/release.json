@@ -1,0 +1,32 @@
+{
+  "schema": "dist-release/v1",
+  "component": "Service",
+  "channel": "alpha",
+  "version": "26.11.0",
+  "compat": [
+    1
+  ],
+  "requires": {
+    "Loader": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    },
+    "App": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "kra-service.msi",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/service%2F26.11.0/kra-service.msi",
+      "size": 31887360,
+      "sha256": "a5dfed2ef6ff4c9dfb4f601e83cd8006132b0d236be6835e6aeff445fdd977eb"
+    }
+  ],
+  "publishedAt": "2026-11-03T20:17:43.2832735+00:00"
+}
