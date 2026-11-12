@@ -2,10 +2,10 @@
   "schema": "dist-current/v1",
   "component": "Service",
   "channel": "alpha",
-  "currentVersion": "26.11.3",
+  "currentVersion": "26.11.4",
   "compat": [
     1
   ],
-  "releaseUri": "releases/service/26.11.3/release.json",
-  "publishedAt": "2026-11-12T13:15:21.6988140+00:00"
+  "releaseUri": "releases/service/26.11.4/release.json",
+  "publishedAt": "2026-11-12T13:49:36.4781237+00:00"
 }
