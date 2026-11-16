@@ -256,9 +256,8 @@
       }
 
       if (host === "kra.karatsoftware.cz" || host === "kra.karat.cz") {
-        // /KRA.msi is a 302 redirect (see staticwebapp.config.json) to the permanent
-        // GitHub Releases asset under the 'kra-latest' tag, which is replaced in place
-        // by the service deployment pipeline for every pure 'release' channel build.
+        // /KRA.msi is src/KRA.msi itself: the KRA release pipeline (ops/release/Promote-Release.ps1)
+        // writes it here every time a Service is promoted to the 'release' channel.
         window.location.replace("/KRA.msi");
       }
     })();
