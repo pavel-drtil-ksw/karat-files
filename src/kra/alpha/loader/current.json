@@ -2,10 +2,10 @@
   "schema": "dist-current/v1",
   "component": "Loader",
   "channel": "alpha",
-  "currentVersion": "26.4.2",
+  "currentVersion": "26.4.3",
   "compat": [
     1
   ],
-  "releaseUri": "alpha/loader/26.4.2/release.json",
-  "publishedAt": "2026-11-16T08:19:27.1286948Z"
+  "releaseUri": "alpha/loader/26.4.3/release.json",
+  "publishedAt": "2026-11-18T12:59:55.7191161Z"
 }

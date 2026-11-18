@@ -1,0 +1,26 @@
+{
+  "schema": "dist-release/v1",
+  "component": "Loader",
+  "channel": "alpha",
+  "version": "26.4.3",
+  "compat": [
+    1
+  ],
+  "requires": {
+    "App": {
+      "minVersion": "26.2.0",
+      "compat": [
+        1
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "kra-loader.msi",
+      "uri": "https://github.com/denis-navratil-ksw/dist/releases/download/loader%2F26.4.3-alpha/kra-loader.msi",
+      "size": 43769856,
+      "sha256": "de278e90d313ff399a1cfc283223cc820b4b100137cd4114da344b0a3e0e9155"
+    }
+  ],
+  "publishedAt": "2026-11-18T12:59:15.5853591Z"
+}
